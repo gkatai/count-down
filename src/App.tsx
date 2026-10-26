@@ -19,8 +19,8 @@ function Month({ year, month, today }: { year: number; month: number; today: Dat
         {Array.from({ length: days }, (_, i) => {
           const d = new Date(year, month, i + 1)
           const { kind, label } = classify(d)
-          const cls = [kind, toISO(d) === toISO(today) && 'today', d < today && 'past', d > end && 'past'].filter(Boolean).join(' ')
-          return <span key={i} className={'day ' + cls} title={label}>{i + 1}</span>
+          const cls = [kind, toISO(d) === toISO(today) && 'today', toISO(d) === cfg.targetDate && 'target', d < today && 'past', d > end && 'past'].filter(Boolean).join(' ')
+          return <span key={i} className={'day ' + cls} title={toISO(d) === cfg.targetDate ? 'Target date' : label}>{i + 1}</span>
         })}
       </div>
     </section>
