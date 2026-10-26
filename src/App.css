@@ -1,0 +1,13 @@
+body { margin: 0; font-family: system-ui, sans-serif; background: #fafafa; color: #222; }
+main { max-width: 1000px; margin: 0 auto; padding: 2rem 1rem; text-align: center; }
+.big { font-size: clamp(6rem, 25vw, 14rem); font-weight: 800; line-height: 1; }
+.sub { font-size: 1.25rem; color: #666; margin-bottom: 2rem; }
+.months { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.5rem; }
+.month h3 { margin: 0 0 .5rem; }
+.grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; }
+.day { padding: 6px 0; border-radius: 4px; background: #eee; }
+.day.weekend { background: #f4a1a1; }
+.day.dayoff { background: #9cc4f5; }
+.day.holiday { background: #9fdba9; }
+.day.past { opacity: .4; }
+.day.today { outline: 2px solid #222; font-weight: 700; opacity: 1; }

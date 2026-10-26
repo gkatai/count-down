@@ -1,10 +1,11 @@
 {
   "name": "count-down",
   "type": "module",
-    "scripts": {
+  "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "test": "vitest run",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -23,6 +24,7 @@
     "globals": "^17.13.0",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.71.2",
-    "vite": "^8.3.4"
+    "vite": "^8.3.4",
+    "vitest": "^5.0.5"
   }
 }
